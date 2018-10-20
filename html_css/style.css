@@ -1,0 +1,19 @@
+h1{
+    background: red;
+    color: green;
+}
+p{
+    background: #ff7f20;
+}
+
+span{
+    background: #00ff00;
+    width: 200px;
+    height: 200px;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    background: #ff0000;
+}
