@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* css reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu {
+            width: 500px;
+            height: 30px;
+        }
+
+        #menu li {
+            list-style: none;
+            width: 120px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            float: left;
+            margin-right: 5px;
+            background: #ff0000;
+        }
+
+        #menu > li:hover {
+            background: #ccc;
+        }
+
+        #menu li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+
+        .submenu {
+            display: none;
+        }
+
+        #menu .submenu li {
+            cursor: pointer;
+        }
+
+        #menu .submenu li:hover {
+            background: orange;
+        }
+
+        #menu > li:hover .submenu {
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body>
+<ul id="menu">
+    <li>
+        <a href="">Link One</a>
+    </li>
+    <li>
+        <a href="">Link Two</a>
+    </li>
+    <li>
+        <a href="">Link Three</a>
+        <ul class="submenu">
+            <li>子菜单1</li>
+            <li>子菜单2</li>
+            <li>子菜单3</li>
+            <li>子菜单4</li>
+        </ul>
+    </li>
+    <li>
+        <a href="">Link Four</a>
+    </li>
+</ul>
+<h1>唯创网讯</h1>
+</body>
+</html>
