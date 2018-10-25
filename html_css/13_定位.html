@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background: #ff0000;
+        }
+        .box2{
+            background: #00ff00;
+            /*position: relative;*/
+            /*top: 100px;*/
+            /*left: 100px;*/
+            /*bottom: 100px;*/
+            /*right: 100px;*/
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .box3{
+            background: #ffff00;
+        }
+
+        #top{
+            width: 100px;
+            height: 100px;
+            background: #ff0000;
+            position: fixed;
+            right: 10px;
+            bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+
+<div id="top">回到顶部</div>
+</body>
+</html>
+<!--
+position: relative; 相对定位
+position: absolute; 绝对定位
+position: fixed; 固定定位
+position: static; 默认值
+position: sticky; 粘性定位
+
+-->
