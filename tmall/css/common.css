@@ -15,3 +15,9 @@ li{
 img{
     border: 0;
 }
+.wrapper{
+    width: 1230px;
+    /*background: #ff0000;*/
+    height: 100%;
+    margin: 0 auto;
+}
