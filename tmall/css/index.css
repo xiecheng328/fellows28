@@ -32,7 +32,13 @@
 
 #quick-menu > li{
     float: left;
-    margin: 0 14px;
+    padding: 0 14px;
+    cursor: pointer;
+    position: relative;
+}
+
+#quick-menu li:hover a{
+    color: #FF0036;
 }
 
 
@@ -49,13 +55,34 @@
 
 #quick-menu .iconfont{
     color: #FF0036;
+    font-size: 12px;
 }
 
 #quick-menu .split{
     width: 1px;
     height: 14px;
     background: #ccc;
-    margin-top: 9px;
+    margin: 9px 0 0 0;
+    padding: 0;
+}
+
+#quick-menu .triangle:hover{
+    background: #ffffff;
+}
+
+#quick-menu a{
+    display: inline-block;
+}
+
+#quick-menu .small-triangle{
+    width: 0;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #bbb transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5px;
+    right: 4px;
 }
 /* header结束 */
 

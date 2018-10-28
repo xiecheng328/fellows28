@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            border: 1px dashed;
+            margin: 100px auto;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+
+            -webkit-transition: transform 1s ease;
+            -moz-transition: transform 1s ease;
+            -ms-transition: transform 1s ease;
+            -o-transition: transform 1s ease;
+            transition: transform 1s ease;
+        }
+        #div2:hover{
+            /* webkit内核的 chrome safari */
+            -webkit-transform: rotate(30deg);
+            /* firefox */
+            -moz-transform: rotate(30deg);
+            /* 微软 */
+            -ms-transform: rotate(30deg);
+            /* 欧朋 */
+            -o-transform: rotate(30deg);
+            /* 标准 */
+            transform: rotate(30deg);
+
+
+            /*transform-origin: 50px 50px;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">div</div>
+    </div>
+</body>
+</html>
