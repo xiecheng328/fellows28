@@ -8,73 +8,75 @@
     margin: 0 auto;
 }
 */
-.top-con{
+.top-con {
     background: rgb(61, 51, 208) url(../img/top-img.jpg) no-repeat center;
     display: block;
     height: 80px;
 }
 
 /* header开始 */
-#header{
+#header {
     height: 32px;
     background: #f2f2f2;
     line-height: 32px;
-    font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    font-family: "Microsoft YaHei", tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
 }
 
-#login-info{
+#login-info {
     float: left;
 }
 
-#quick-menu{
+#quick-menu {
     float: right;
 }
 
-#quick-menu > li{
+#quick-menu > li {
     float: left;
     padding: 0 14px;
     cursor: pointer;
     position: relative;
 }
 
-#quick-menu li:hover a{
+#quick-menu li:hover a {
     color: #FF0036;
 }
 
-
-#header a, #login-info span{
+#header a, #login-info span {
     font-size: 12px;
     color: #999;
 }
-#login-info a{
+
+#login-info a {
     margin-left: 10px;
 }
-#login-info a:hover{
+
+#login-info a:hover {
     color: #FF0036;
 }
 
-#quick-menu .iconfont{
+#quick-menu .iconfont {
     color: #FF0036;
     font-size: 12px;
 }
 
-#quick-menu .split{
+#quick-menu .split {
     width: 1px;
     height: 14px;
     background: #ccc;
-    margin: 9px 0 0 0;
+    margin: 9px 0 0 14px;
     padding: 0;
 }
 
-#quick-menu .triangle:hover{
+#quick-menu .triangle:hover {
     background: #ffffff;
 }
 
-#quick-menu a{
+#quick-menu a {
     display: inline-block;
 }
 
-#quick-menu .small-triangle{
+#quick-menu .triangle::after {
+    content: '';
     width: 0;
     border-width: 3px;
     border-style: solid;
@@ -84,6 +86,27 @@
     margin-top: -1.5px;
     right: 4px;
 }
+
+#quick-menu .triangle:hover::after {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+    -webkit-transform-origin: 3px 1.5px;
+    -moz-transform-origin: 3px 1.5px;
+    -ms-transform-origin: 3px 1.5px;
+    -o-transform-origin: 3px 1.5px;
+    transform-origin: 3px 1.5px;
+
+    -webkit-transition: transform .5s ease;
+    -moz-transition: transform .5s ease;
+    -ms-transition: transform .5s ease;
+    -o-transition: transform .5s ease;
+    transition: transform .5s ease;
+}
+
 /* header结束 */
 
 
