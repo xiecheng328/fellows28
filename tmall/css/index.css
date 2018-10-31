@@ -16,18 +16,23 @@
 
 /* header开始 */
 #header {
-    height: 32px;
+    height: 34px;
     background: #f2f2f2;
-    line-height: 32px;
+    line-height: 34px;
     font-family: "Microsoft YaHei", tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.30);
+    -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.30);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.30);
 }
 
 #login-info {
     float: left;
+    height: 34px;
 }
 
 #quick-menu {
     float: right;
+    height: 34px;
 }
 
 #quick-menu > li {
@@ -67,12 +72,15 @@
     padding: 0;
 }
 
-#quick-menu .triangle:hover {
-    background: #ffffff;
+#quick-menu .triangle {
+    border-style: solid;
+    border-width: 0 1px;
+    border-color: transparent;
 }
 
-#quick-menu a {
-    display: inline-block;
+#quick-menu .triangle:hover {
+    background: #ffffff;
+    border-color: transparent #eee transparent #eee;
 }
 
 #quick-menu .triangle::after {
@@ -107,6 +115,118 @@
     transition: transform .5s ease;
 }
 
+#quick-menu .triangle .submenu {
+    position: absolute;
+    top: 32px;
+    left: -1px;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    border-color: #eee;
+    background: #ffffff;
+    width: 74px;
+    padding: 0 14px;
+    display: none;
+}
+
+#quick-menu .triangle:hover .submenu {
+    display: block;
+}
+
+#quick-menu .qr-code {
+    width: 175px;
+    height: 227px;
+    box-shadow: 0 0 5px #aaa;
+    position: absolute;
+    top: 26px;
+    left: -48px;
+    background: #ffffff;
+    display: none;
+}
+
+#quick-menu .mobile:hover .qr-code {
+    display: block;
+}
+
+#quick-menu .qr-code:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    top: -10px;
+}
+
 /* header结束 */
+
+/* logo-search开始 */
+#logo-search{
+    margin-top: 2px;
+}
+#logo{
+    float: left;
+}
+#search{
+    /*margin-left: 290px;*/
+    float: left;
+    margin-top: 38px;
+}
+
+#search form{
+    width: 625px;
+    height: 36px;
+    border: 2px solid #FF0036;
+}
+
+#search .search-ipt{
+    width: 493px;
+    height: 36px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    text-indent: 10px;
+}
+
+#search .search-btn{
+    width: 128px;
+    height: 36px;
+    background: #FF0036;
+    border: none;
+    outline: none;
+    float: right;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+#search .hot-query{
+    margin-top: 4px;
+}
+
+#search .hot{
+    float: left;
+    border-right: 1px solid #999;
+    padding: 0 12px;
+}
+
+#search .hot a{
+    color: #999;
+    font-size: 14px;
+}
+
+#search .hot-query-highlight a{
+    color: #FF0036;
+}
+
+#search .last{
+    border-right: none;
+}
+
+
+
+/* logo-search结束 */
 
 
