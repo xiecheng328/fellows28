@@ -1,3 +1,8 @@
+body{
+    height: 2000px;
+}
+
+
 /*
 #top{
     text-align: center;
@@ -360,4 +365,127 @@
 
 /* banner 结束 */
 
+
+/* side-bar 开始 */
+#side-bar{
+    width: 35px;
+    background: #000000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#side-bar .iconfont{
+    color: #fff;
+}
+
+#side-bar .chart{
+    margin-top: 200px;
+    position: relative;
+}
+
+
+
+#side-bar .vip{
+    color: #fff;
+    width: 90px;
+    height: 36px;
+    background: #494949;
+    text-align: center;
+    line-height: 36px;
+    position: absolute;
+    left: -200px;
+    top: -8px;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    /*display: none;*/
+    visibility: hidden;
+}
+
+#side-bar .chart:hover .vip{
+    left: -90px;
+    opacity: 1;
+    /*display: block;*/
+    visibility: visible;
+}
+
+#side-bar .triangle{
+    width: 16px;
+    height: 16px;
+    background: #494949;
+    position: absolute;
+    top: 10px;
+    right: -3px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+
+
+/* side-bar 结束 */
+
+/* brand-list 开始 */
+#brand-list .brand{
+    width: 122px;
+    height: 108px;
+    border-right: 1px solid #ccc;
+    text-align: center;
+    position: relative;
+    float: left;
+}
+
+#brand-list .brand img{
+    width: 100%;
+    margin-top: 25px;
+}
+
+#brand-list .brand-mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#brand-list .brand:hover .brand-mask{
+    opacity: 1;
+}
+
+#brand-list .brand-mask p{
+    color: #fff;
+
+}
+
+#brand-list .brand-mask .coupon{
+    margin-top: 30px;
+}
+#brand-list .brand-mask .enter{
+    width: 80px;
+    height: 18px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    background: #FF0036;
+    line-height: 18px;
+    margin: 0 auto;
+}
+
+/* brand-list 结束 */
 
