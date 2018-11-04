@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 400px;
+            height: 400px;
+            background: #ff0000;
+            position: relative;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #00ff00;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 子元素不知道宽高 */
+            transform: translate(-50%, -50%);
+        }
+
+        #box{
+            width: 200px;
+            height: 200px;
+            background: #ff0;
+            transform: translate(100px, 100px);
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2"></div>
+</div>
+
+
+<div id="box"></div>
+</body>
+</html>
