@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 400px;
+            height: 400px;
+            background: #ff0000;
+            /*overflow: hidden;*/
+            /*float: left;*/
+            /*display: inline-block;*/
+            position: absolute;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #00ff00;
+            margin-top: 50px;
+        }
+        #div3, #div4{
+            width: 200px;
+            height: 200px;
+        }
+        #div3{
+            background: #ff0000;
+            margin-bottom: 100px;
+        }
+        #div4{
+            background: #00ff00;
+            margin-top: 100px;
+        }
+        
+        #div5, #div6{
+            overflow: hidden;
+        }
+
+        #list{
+            border: 1px solid;
+            /*height: 30px;*/
+            /*overflow: hidden;*/
+            /*float: left;*/
+            /*position: absolute;*/
+            /*display: inline-block;*/
+        }
+        
+        #list li{
+            float: left;
+        }
+
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<!--
+BFC : block formating context 块级格式化上下文
+-->
+<!--<div id="div1">
+    <div id="div2"></div>
+</div>
+
+-->
+<!--<div id="div5">
+    <div id="div3"></div>
+</div>
+<div id="div6">
+    <div id="div4"></div>
+</div>-->
+
+<ul id="list" class="clearfix">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+    <li>005</li>
+</ul>
+
+</body>
+</html>
