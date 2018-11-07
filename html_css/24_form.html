@@ -8,13 +8,17 @@
             /*width: 200px;*/
             /*height: 50px;*/
         }
+
+        #desc{
+            resize: none;
+        }
     </style>
 </head>
 <body>
 <form action="index.php/reigster">
     <p>
         <label for="username">用户名：</label>
-        <input type="text" id="username">
+        <input type="text" id="username" name="uname">
     </p>
 
     <p>
@@ -42,9 +46,9 @@
     </p>
     <p>
         备注:
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="" id="desc" cols="30" rows="10"></textarea>
     </p>
-    <input type="submit">
+    <input type="submit" value="注册">
     <input type="reset">
 
 
