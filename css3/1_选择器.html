@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* #ul1 .red ~ li{
+            background: #f00;
+        }
+
+        #div1 .aa ~ p{
+            background: #ff0000;
+        }
+
+        input[id^="user"]{
+            background: #ff0000;
+        } */
+
+
+        /* input[name="username"]{
+            background: #00ff00;
+        }
+        input[name="username"]:focus{
+            background: #ff0000;
+        } */
+        /* #ul1 li:not(.red){
+            background: #ff0000;
+        } */
+        /* #ul1 li:last-child{
+            background: #ff0000;
+        }
+
+
+        .demo  span:last-of-type { 
+            color: #f00; 
+        } */
+
+        #ul1 li:nth-child(2n+1){
+            background: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="ul1">
+        <li>001</li>
+        <li class="red">002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+    </ul>
+
+    <div id="div1">
+        <div>01</div>
+        <div class="aa">02</div>
+        <div>03</div>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+    </div>
+
+    用户名：<input type="text" name="username" id="namusere">
+    密码： <input type="password" name="password" id="pwd">
+    年龄: <input type="text" id="userage">
+
+    <div class="demo">
+        <span>span1</span>
+        <p>
+            <span>span2</span>
+            <span>span3</span>
+        </p>
+        <span>span4</span>
+    </div>
+</body>
+
+</html>
