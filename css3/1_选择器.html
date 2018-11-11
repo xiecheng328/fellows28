@@ -41,6 +41,39 @@
         #ul1 li:nth-child(2n+1){
             background: #ff0000;
         }
+
+        #div2{
+            width: 100px;
+            border: 1px solid;
+        }
+
+        #div2::first-line{
+            background: #ff0000;
+        }
+
+        #div3::selection{
+            background: orange;
+            color: #fff;
+        }
+
+        input::-webkit-input-placeholder {
+            color: orange;
+        }
+        input:-ms-input-placeholder { 
+            color: orange;
+        }
+        input:-moz-placeholder {
+            color: orange;
+        }
+        input::-moz-placeholder {
+            color: orange;
+        }
+
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
     </style>
 </head>
 
@@ -74,6 +107,15 @@
         </p>
         <span>span4</span>
     </div>
+
+    <div id="div2">
+        阿什顿发阿斯顿发顺丰安防按时发生发发撒发顺丰
+    </div>
+    <div id="div3">
+        撒打算发沙发沙发斯蒂芬沙发撒发顺丰
+    </div>
+
+    <input type="text" id="ph" placeholder="请输入关键字">
 </body>
 
 </html>

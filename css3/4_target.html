@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+        #menu{
+            position: absolute;
+            top: 0;
+            left: -200px;
+            bottom: 0;
+            background: #cccccc;
+            width: 200px;
+            transition: all 2s ease;
+        }
+        #menu-btn{
+            margin-left: 300px;
+        }
+
+        #menu:target{
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#menu" id="menu-btn">菜单</a>
+
+
+    <div id="menu"></div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 2000px;
+        }
+        #menu{
+            overflow: hidden;
+        }
+        #menu li{
+            list-style: none;
+            width: 120px;
+            height: 30px;
+            background: #cccccc;
+            float: left;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        #div1{
+            height: 300px;
+            background: #ff0000;
+            margin-top: 300px;
+        }
+        #div2{
+            height: 400px;
+            background: #00ff00;
+        }
+        #div3{
+            height: 500px;
+            background: #ffff00;
+        }
+        #div3:target{
+            background: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li><a href="#div1">Link Div1</a></li>
+        <li><a href="#div2">Link Div2</a></li>
+        <li><a href="#div3">Link Div3</a></li>
+    </ul>
+    <div id="content">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </div>
+</body>
+</html>
