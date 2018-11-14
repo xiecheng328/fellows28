@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .main{
+            display: -webkit-box;
+            /* -webkit-box-orient: vertical; */
+            /* -webkit-box-direction: reverse; */
+            -webkit-box-align: center;
+        }
+        .box{
+        }
+        .box1{
+            background: #ff0000;
+            width: 200px;
+            height: 300px;
+            -webkit-box-ordinal-group: 3;
+        }
+        .box2{
+            background: #00ff00;
+            -webkit-box-flex: 1;
+            margin: 0 30px;
+            -webkit-box-ordinal-group: 1;
+            height: 400px;
+
+        }
+        .box3{
+            background: #ffff00;
+            -webkit-box-flex: 2;
+            height: 500px;
+            -webkit-box-ordinal-group: 2;
+
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+    
+</body>
+</html>
