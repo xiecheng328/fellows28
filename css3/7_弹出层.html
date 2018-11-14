@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #mask{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* background: #cccccc;
+            opacity: .5; */
+            background: rgba(255, 0, 0, .5);
+        }
+
+        #container{
+            width: 400px;
+            height: 300px;
+            border: 1px solid;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -200px;
+        }
+        #title{
+            background: #000000;
+            color: #fff;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>唯创网讯</h1>
+    <div id="mask">
+        <div id="container">
+            <div id="title">注册</div>
+            <div id="content"></div>
+        </div>
+    </div>
+</body>
+</html>
