@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .div{
+            width: 200px;
+            height: 200px;
+        }
+        .div1{
+            border:1px dashed;
+            margin: 200px auto;
+            perspective: 800px;
+            perspective-origin: 50% 800px;
+        }
+        .div2{
+            background: #ff0000;
+            transform: rotateY(30deg);
+            transform-style: preserve-3d;
+        }
+        .div3{
+            background: #00ff00;
+            transform: rotateY(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="div div1">
+        <div class="div div2">
+            <div class="div div3"></div>
+        </div>
+    </div>
+</body>
+</html>
