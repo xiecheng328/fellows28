@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <h1>唯创网讯</h1>
 
@@ -23,28 +25,28 @@
         // js 基本数据类型 number string boolean(布尔true/false) undefined null
         // NaN  not a number
 
-       /*  var a = 8;
-        // console.log(a + 6);
-        // console.log(a * 6);
-        // console.log(a / 6);
-        console.log(typeof a);
-        var b = 0.5;
-        console.log(typeof b);
-        var c = "weichuang";
-        console.log(typeof c);
-        var d = 'x';
-        console.log(typeof d);
-        var e = true; // false
-        console.log(typeof e);
-        var f; // undefined
-        console.log(typeof(f)); */
+        /*  var a = 8;
+         // console.log(a + 6);
+         // console.log(a * 6);
+         // console.log(a / 6);
+         console.log(typeof a);
+         var b = 0.5;
+         console.log(typeof b);
+         var c = "weichuang";
+         console.log(typeof c);
+         var d = 'x';
+         console.log(typeof d);
+         var e = true; // false
+         console.log(typeof e);
+         var f; // undefined
+         console.log(typeof(f)); */
 
 
-       /*  var g = 5;
-        console.log(typeof g);
-
-        g = 'abc';
-        console.log(typeof g); */
+        /*  var g = 5;
+         console.log(typeof g);
+ 
+         g = 'abc';
+         console.log(typeof g); */
         // var b12ad;
 
         // var 唯创 = 'abc';
@@ -74,10 +76,118 @@
             console.log('假');
         } */
 
-        var num = window.prompt("请输入一个数字", 0);
-        console.log(num);
+        // var num = window.prompt("请输入一个数字", 0);
+        // console.log(num);
 
+
+        /* var a;
+        if (4 > 5) {
+            a = 4;
+        }else if(3 > 5){
+            a = 5;
+        }else{
+            a = 6;
+        }
+        console.log(a); */
+
+        /* if(num > 5 && num < 10){
+
+        } */
+        // var num = window.prompt('请输入数字', 0);
+        // console.log(typeof num);
+        /* switch (num) {
+            case '3':
+                console.log(3);
+                break;
+            case '4':
+                console.log(4);
+                break;
+            case '5':
+                console.log(5);
+                break;
+
+            case 'a':
+            case 'A':
+                console.log('你输入的是a字母');
+                break;
+            default:
+                console.log('默认');
+        } */
+
+       /*  if(num === 3){ // '3' == 3
+            console.log(3);
+        }else if(num === 4){
+            console.log(4);
+        }else{
+            console.log('默认');
+        } */
+
+        // !=
+        // !==
+
+        /* if(3 < 4){
+            console.log('真');
+        }else{
+            console.log('假');
+        }
+
+        3 < 4? console.log('真'):console.log('假');
+
+         */
+
+        /* for(var i = 1; i < 4; i++){
+            console.log(i);
+        } */
+
+        /* var i = 1;
+        while(i > 4){
+            console.log(i);
+            i++;
+        } */
+
+        /* var i = 1; */
+        /* do{ */
+        /*     console.log (i);*/
+        /*     i++; */
+        /* }while(i > 4); */
+
+
+        var w1 = 10, h1 = 5;
+        var area1 = w1 * h1 / 2;
+
+        var w2 = 3, h2 = 8;
+        var area2 = w2 * h2 / 2;
+
+        var w3 = 4, h3 = 6;
+        var area3 = w3 * h3 / 2;
+
+
+        console.log(area1);
+        console.log(area2);
+        console.log(area3);
+
+        function getArea(w, h){
+            var area = w * h / 2
+            return area;
+        }
+        
+        /* function sum(a, b){ // 形式参数
+            var result = a + b;
+            // console.log(result);
+            return result;
+        }
+
+        var res = sum(2, 3);// 实际参数
+        console.log(res); */
+        
+        // console.log(result);
+        // console.log(result * 2);
        
+
+        sum(3, 4);
+        getArea(2, 3);
+
     </script>
 </body>
+
 </html>
