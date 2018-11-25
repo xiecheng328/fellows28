@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        4.	在页面上编程输出100~1000之间的所有素数，并要求每行显示6个素数
+     -->
+
+    <script>
+        function prime(n) {
+            for (var i = 2; i <= Math.sqrt(n); i++) {
+                var bFlag = false; // 标志位，标识是否是素数，false表示不是素数， true表示是素数
+                if (n % i == 0) {
+                    bFlag = false;
+                    break;
+                } else {
+                    bFlag = true;
+                }
+            }
+            return bFlag;
+        }
+
+
+        var resultArr = [];
+        for (var i = 100; i <= 1000; i++) {
+            if (prime(i)) {
+                // document.write(i + '<br>');
+                resultArr.push(i);
+            }
+        }
+
+        for (var i = 0; i < resultArr.length; i++) {
+            document.write(resultArr[i] + '&nbsp;');
+            if ((i + 1) % 6 == 0) {
+                document.write('<br>');
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
