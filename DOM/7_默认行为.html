@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a id="bd" href="http://www.baidu.com">百度一下</a>
+    <script>
+        var oBD = document.getElementById('bd');
+        oBD.onclick = function(e){
+            console.log(oBD.innerHTML);
+            e.preventDefault();
+            
+
+        };
+    </script>
+</body>
+</html>

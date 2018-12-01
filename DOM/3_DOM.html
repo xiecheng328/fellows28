@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #list {
+            background: #ff0000;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oList = document.getElementById('list');
+            console.log(oList);
+
+            // HTMLCollection  类数组
+            var aLi = oList.getElementsByTagName('li');
+            console.log(aLi);
+        };
+    </script>
+</head>
+
+<body>
+    <ul id="list">
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+    </ul>
+
+    <ul id="list2">
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+    </ul>
+
+    <img src="logo.png" alt="" id="logo">
+
+    <script>
+        /*  window.onload = function(){
+               var oLogo = document.getElementById('logo');
+             console.log(oLogo.offsetWidth);
+         }; */
+        var oLogo = document.getElementById('logo');
+        oLogo.onload = function () {
+            console.log(oLogo.offsetWidth);
+        };
+
+    </script>
+</body>
+
+</html>

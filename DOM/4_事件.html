@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red{
+            background: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">唯创网讯</div>
+    <input type="text" id="username">
+    <select name="" id="school" >
+        <option value="">农大</option>
+        <option value="">林大</option>
+        <option value="">黑大</option>
+    </select>
+
+    <script>
+        var oDiv1 = document.getElementById('div1');
+        oDiv1.onclick = function(){
+            // console.log(123);
+            // oDiv1.style.background = '#f00';
+            oDiv1.className = 'red';
+        };
+
+        var oUsername = document.getElementById('username');
+        oUsername.onfocus = function(){
+            console.log('获取焦点');
+        };
+        oUsername.onblur = function(){
+            console.log('失去焦点');
+        };
+        oUsername.onkeydown = function(){
+            console.log('onkeydown');
+        };
+
+        var oSchool = document.getElementById('school');
+        oSchool.onchange = function(){
+            console.log('change');
+        };
+    
+    </script>
+</body>
+</html>

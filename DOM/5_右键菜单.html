@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu {
+            border: 1px solid;
+            width: 120px;
+            display: none;
+            position: absolute;
+            background: #ffffff;
+            z-index: 999;
+        }
+
+        #menu li {
+            list-style: none;
+            width: 120px;
+            height: 30px;
+            border-bottom: 1px dashed #ccc;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        #menu li:hover {
+            background: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li>菜单1</li>
+        <li>菜单2</li>
+        <li>菜单3</li>
+        <li>菜单4</li>
+        <li>菜单5</li>
+    </ul>
+    <h1>唯创网讯</h1>
+
+    <script>
+        var oMenu = document.getElementById('menu');
+        var aLi = oMenu.getElementsByTagName('li');
+        // 右键菜单事件
+        document.oncontextmenu = function (e) { // e 事件对象
+            e = e || window.event; // 事件对象兼容性
+            oMenu.style.display = 'block'; // 显示菜单
+            oMenu.style.left = e.clientX + 'px'; // 鼠标坐标
+            oMenu.style.top = e.clientY + 'px';
+            // e.preventDefault(); // 阻止默认行为
+            // window.event
+            return false; // 阻止默认菜单
+        };
+
+        document.onclick = function () {
+            oMenu.style.display = 'none';
+        };
+
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].onclick = function () {
+                // console.log(aLi[i]); // i=5
+                alert(this.innerHTML); // this 对于当前对象的引用
+            };
+        }
+
+
+
+    </script>
+</body>
+
+</html>
