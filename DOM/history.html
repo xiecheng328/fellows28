@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #back{
+
+        }
+    </style>
+</head>
+<body>
+    <h1>历史</h1>
+    <button id="back">返回</button>
+
+    <script>
+        var oBack = document.getElementById('back');
+        // console.log(oBack);
+        oBack.onclick = function(){
+            // console.log(123);
+            // history.back();
+            history.go(-1);
+        };
+    
+    </script>
+</body>
+</html>
