@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选项卡</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            width: 400px;
+            height: 300px;
+            border: 1px solid;
+            margin: 100px auto;
+        }
+
+        #tab {
+            height: 30px;
+            border-bottom: 1px solid #000;
+        }
+
+        #tab li {
+            width: 120px;
+            height: 30px;
+            background: #cccccc;
+            float: left;
+            list-style: none;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        #tab .tab-selected {
+            background: #000000;
+            color: #fff;
+
+        }
+
+        #content div {
+            display: none;
+        }
+
+        #content .content-selected {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <ul id="tab">
+            <li class="tab-selected">html</li>
+            <li>css</li>
+            <li>javascript</li>
+        </ul>
+        <div id="content">
+            <div class="content-selected">abc</div>
+            <div>efg</div>
+            <div>asdfasf</div>
+        </div>
+    </div>
+
+    <script>
+        var oTab = document.getElementById('tab');
+        var aLi = oTab.getElementsByTagName('li');
+        var oContent = document.getElementById('content');
+        var aDiv = oContent.getElementsByTagName('div');
+
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].index = i; // 给每个li自定义一个属性index，保存住循环i的值
+            // 相当于
+            // aLi[0].index = 0;
+            // aLi[1].index = 1;
+            // aLi[2].index = 2;
+            aLi[i].onclick = function () {
+                // this.style.background = '#000';
+                // this.style.color = '#fff';
+                for (var j = 0; j < aLi.length; j++) {
+                    aLi[j].className = '';
+                    aDiv[j].className = '';
+                }
+                this.className = 'tab-selected';
+                aDiv[this.index].className = 'content-selected'; // 当前li对应的div
+            };
+        }
+
+    </script>
+</body>
+
+</html>

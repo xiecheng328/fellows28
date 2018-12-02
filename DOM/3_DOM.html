@@ -12,33 +12,40 @@
         }
     </style>
     <script>
-        window.onload = function () {
+        /* window.onload = function () {
             var oList = document.getElementById('list');
             console.log(oList);
 
             // HTMLCollection  类数组
             var aLi = oList.getElementsByTagName('li');
             console.log(aLi);
-        };
+        }; */
     </script>
 </head>
 
 <body>
     <ul id="list">
         <li>001</li>
-        <li>002</li>
+        <li class="aa">002</li>
         <li>003</li>
-        <li>004</li>
+        <li class="aa">004</li>
         <li>005</li>
     </ul>
 
     <ul id="list2">
         <li>001</li>
         <li>002</li>
-        <li>003</li>
+        <li class="aa">003</li>
         <li>004</li>
         <li>005</li>
     </ul>
+
+    <p>唯创</p>
+
+
+    <form action="xx.php/login">
+        <input type="text" name="username">
+    </form>
 
     <img src="logo.png" alt="" id="logo">
 
@@ -47,10 +54,27 @@
                var oLogo = document.getElementById('logo');
              console.log(oLogo.offsetWidth);
          }; */
-        var oLogo = document.getElementById('logo');
+        /* var oLogo = document.getElementById('logo');
         oLogo.onload = function () {
             console.log(oLogo.offsetWidth);
-        };
+        };*/
+
+        var p = document.getElementsByTagName('p')[0];
+        // console.log(p.innerHTML); 
+        p.style.background = '#f00';
+        p.style.fontSize = '80px';
+        p.style.borderTopColor = '#0f0';
+
+        // NodeList 
+        /*  var oUsername = document.getElementsByName('username');
+         console.log(oUsername[0]); */
+
+        // #list .aa{}
+       /*  var oList = document.getElementById('list');
+        // HTMLCollection
+        var aAA = oList.getElementsByClassName('aa');
+        console.log(aAA);
+ */
 
     </script>
 </body>
