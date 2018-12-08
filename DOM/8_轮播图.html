@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #imgs img {
+            display: none;
+        }
+
+        #imgs .img-selected {
+            display: block;
+        }
+
+        #nav {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        #arrows {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+
+        #nav li,
+        #arrows span {
+            width: 20px;
+            height: 20px;
+            background: #000000;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            float: left;
+            margin-right: 5px;
+            list-style: none;
+            cursor: pointer;
+        }
+
+        #nav .nav-selected {
+            background-color: orange;
+        }
+
+        #container {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="imgs">
+            <img src="img/1.jpg" alt="" class="img-selected">
+            <img src="img/2.jpg" alt="">
+            <img src="img/3.jpg" alt="">
+            <img src="img/4.jpg" alt="">
+        </div>
+        <ul id="nav">
+            <li class="nav-selected">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <div id="arrows">
+            <span id="left">&lt;</span>
+            <span id="right">&gt;</span>
+        </div>
+    </div>
+
+    <script>
+        var oNav = document.getElementById('nav');
+        var aLi = oNav.getElementsByTagName('li');
+        var oImgs = document.getElementById('imgs');
+        var aImg = oImgs.getElementsByTagName('img');
+        var oLeft = document.getElementById('left');
+        var oRight = document.getElementById('right');
+        var nowIndex = 0; // 当前选中的索引
+        var oContainer = document.getElementById('container');
+        var timer = null;
+
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].index = i;
+            aLi[i].onmouseover = function (e) {
+                nowIndex = this.index;
+                changeImg();
+            };
+        }
+
+        oLeft.onclick = oRight.onclick = function () {
+            if (this === oRight) {
+                nowIndex++;
+            } else {
+                nowIndex--;
+            }
+            // 判断范围
+            if (nowIndex == aImg.length) {
+                nowIndex = 0;
+            }
+            if (nowIndex == -1) {
+                nowIndex = aImg.length - 1;
+            }
+            changeImg();
+        };
+
+        oLeft.onselectstart = oRight.onselectstart = function(){
+            return false;
+        };
+
+
+        play();
+
+        oContainer.onmouseover = function () {
+            clearInterval(timer);
+        };
+        oContainer.onmouseout = function () {
+            play();
+        };
+
+        function play(){
+            timer = setInterval(function () {
+                oRight.onclick();
+            }, 1000);
+        }
+
+        function changeImg() {
+            // 切换橙色 和 图片
+            for (var i = 0; i < aLi.length; i++) {
+                aLi[i].className = '';
+                aImg[i].className = '';
+            }
+            aLi[nowIndex].className = 'nav-selected';
+            aImg[nowIndex].className = 'img-selected';
+        }
+
+
+
+
+        /* var a = 5;
+        function foo(){
+            var a = 6;
+        }
+        foo();
+        console.log(a); */
+    </script>
+
+</body>
+
+</html>
