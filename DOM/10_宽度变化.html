@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1,
+        #div2,
+        #div3 {
+            width: 100px;
+            height: 40px;
+            background: #ff0000;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+
+    <script>
+        var aDiv = document.getElementsByTagName('div');
+        for (var i = 0; i < aDiv.length; i++) {
+            aDiv[i].onmouseover = function () {
+                clearInterval(this.timer);
+                // var that = this;
+                this.timer = setInterval(function () {
+                    if (this.offsetWidth > 500) {
+                        clearInterval(this.timer);
+                    } else {
+                        this.style.width = this.offsetWidth + 10 + 'px';
+                    }
+                }.bind(this), 50);
+            };
+            aDiv[i].onmouseout = function () {
+                clearInterval(this.timer);
+                this.timer = setInterval(function () {
+                    if (this.offsetWidth < 100) {
+                        clearInterval(this.timer);
+                    } else {
+                        this.style.width = this.offsetWidth - 10 + 'px';
+                    }
+                }.bind(this), 50);
+            };
+        }
+
+
+
+    </script>
+</body>
+
+</html>
