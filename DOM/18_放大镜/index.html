@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #small,
+        #big {
+            float: left;
+        }
+
+        #small {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+
+        #big {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            display: none;
+            position: relative;
+        }
+
+        #pic {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #drag {
+            width: 200px;
+            height: 200px;
+            background: #cccccc;
+            opacity: .5;
+            filter: alpha(opacity=50);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        #mask{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ff0000;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="small">
+        <img src="1.jpg" alt="">
+        <div id="drag"></div>
+        <div id="mask"></div>
+    </div>
+    <div id="big">
+        <img src="2.jpg" alt="" id="pic">
+    </div>
+
+    <script>
+        var oSmall = document.getElementById('small');
+        var oDrag = document.getElementById('drag');
+        var oBig = document.getElementById('big');
+        var oPic = document.getElementById('pic');
+
+        oSmall.onmouseover = function () {
+            oDrag.style.display = 'block';
+            oBig.style.display = 'block';
+            // console.log('oSmall.onmouseover');
+        };
+        oSmall.onmouseout = function () {
+            oDrag.style.display = 'none';
+            oBig.style.display = 'none';
+            // console.log('oSmall.onmouseout');
+        };
+
+        oDrag.onmouseover = function () {
+            // console.log('oDrag.onmouseover');
+        };
+
+        oDrag.onmouseout = function () {
+            // console.log('oDrag.onmouseout');
+        };
+
+        oSmall.onmousemove = function (e) {
+            e = e || window.event;
+            var left = e.clientX - oDrag.offsetWidth / 2;
+            var top = e.clientY - oDrag.offsetHeight / 2;
+
+            if (top < 0) {
+                top = 0;
+            }
+            if (left < 0) {
+                left = 0;
+            }
+            var xMax = oSmall.offsetWidth - oDrag.offsetWidth;
+            var yMax = oSmall.offsetHeight - oDrag.offsetHeight;
+            if (left > xMax) {
+                left = xMax;
+            }
+            if (top > yMax) {
+                top = yMax;
+            }
+            oDrag.style.left = left + 'px';
+            oDrag.style.top = top + 'px';
+
+            // 移动大图片
+            var xScale = left / xMax;
+            var yScale = top / yMax;
+            oPic.style.left = -xScale * (oPic.offsetWidth - oBig.offsetWidth) + 'px';
+            oPic.style.top = -yScale * (oPic.offsetHeight - oBig.offsetHeight) + 'px';
+        };
+
+
+
+    </script>
+</body>
+
+</html>
