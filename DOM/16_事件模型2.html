@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="add">ADD</button>
+    <ul id="list">
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+    </ul>
+
+    <script>
+        var oList = document.getElementById('list');
+        var aLi = oList.getElementsByTagName('li');
+        var oAdd = document.getElementById('add');
+
+        /* for (var i = 0; i < aLi.length; i++) {
+            aLi[i].addEventListener('click', function () {
+                console.log(this.innerHTML);
+            });
+        } */
+
+        oList.addEventListener('click', function (e) {
+            // console.log(e.target.innerHTML);
+            console.log(this === e.currentTarget); // true
+        });
+
+        oAdd.addEventListener('click', function () {
+            var oLi = document.createElement('li'); // 创建元素
+            oLi.innerHTML = Math.random();
+            oList.appendChild(oLi);// 追加
+        });
+
+
+
+    </script>
+</body>
+
+</html>

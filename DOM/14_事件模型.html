@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 400px;
+            height: 400px;
+            background: #ff0000;
+        }
+
+        #div2 {
+            width: 300px;
+            height: 300px;
+            background: #ffff00;
+        }
+
+        #div3 {
+            width: 200px;
+            height: 200px;
+            background: #00ff00;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div id="div1">
+        <div id="div2">
+            <div id="div3"></div>
+        </div>
+    </div>
+
+    <script>
+        var oDiv1 = document.getElementById('div1');
+        var oDiv2 = document.getElementById('div2');
+        var oDiv3 = document.getElementById('div3');
+        var oBody = document.getElementById('body');
+        var oHtml = document.getElementById('html');
+
+        /* oDiv1.onclick = function(){
+            alert('div1');
+        };
+ 
+        oDiv2.onclick = function(){
+           alert('div2');
+        };
+
+       oDiv3.onclick = function(){
+           alert('div3');
+       }; */
+
+        /*  oBody.onclick = function(){
+             console.log('body');
+         };
+ 
+         oHtml.onclick = function(){
+             console.log('html');
+         }; */
+
+        /* oDiv1.addEventListener('click', function(){
+            console.log('aa');
+        }); */
+
+        /* oDiv1.addEventListener('click', function () {
+            console.log('div1捕获');
+        }, true);
+        oDiv2.addEventListener('click', function () {
+            console.log('div2捕获');
+        }, true);
+        oDiv3.addEventListener('click', function () {
+            console.log('div3捕获');
+        }, true);
+
+*/
+
+        oDiv1.addEventListener('click', function (e) {
+            console.log('div1冒泡');
+            //  console.log(this);
+            e.stopPropagation();
+        }, false);
+        oDiv2.addEventListener('click', function (e) {
+            console.log('div2冒泡');
+            e.stopPropagation();
+        }, false);
+        oDiv3.addEventListener('click', function (e) {
+            console.log('div3冒泡');
+            e.stopPropagation();
+        }, false);
+
+
+
+        /* var xx = 5;
+
+        oDiv1.attachEvent('onclick', function () {
+            alert('div1');
+            // alert(this.xx); //this -> window
+            window.event.cancelBubble = true;
+        });
+
+        oDiv2.attachEvent('onclick', function () {
+            alert('div2');
+            window.event.cancelBubble = true;
+        });
+
+        oDiv3.attachEvent('onclick', function () {
+            alert('div3');
+            window.event.cancelBubble = true;
+        }); */
+
+
+
+    </script>
+</body>
+
+</html>
+<!-- 
+事件：事件源 事件处理函数 事件对象e
+
+事件冒泡   里 -> 外
+事件捕获   外 -> 里
+
+先捕获 后冒泡
+
+addEventListener  true捕获 false冒泡
+阻止事件传播：e.stopPropagation();
+
+
+attachEvent   
+阻止事件冒泡：window.event.cancelBubble = true;
+
+事件源： e.target   window.event.srcElement
+
+
+事件委托/事件代理: 利用事件冒泡把子元素事件委托给父元素绑定
+
+this === e.currentTarget
+
+
+click 慢300ms
+tap
+ -->
